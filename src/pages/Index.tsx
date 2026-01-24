@@ -1,31 +1,36 @@
 import { motion } from "framer-motion";
-import { Users, FlaskConical, Truck } from "lucide-react";
+import { Globe, Users, FlaskConical, Truck } from "lucide-react";
 import Header from "@/components/Header";
 import VideoBackground from "@/components/VideoBackground";
 import PortalCard from "@/components/PortalCard";
 
 const portals = [
   {
+    title: "Website",
+    icon: Globe,
+    href: "https://www.groenkunsmis.co.za",
+  },
+  {
     title: "Human Resources",
     icon: Users,
-    href: "https://app.allsize.co.za",
+    href: "https://app.groenkunsmis.co.za",
   },
   {
     title: "Formulations",
     icon: FlaskConical,
-    href: "https://form.allsize.co.za",
+    href: "https://form.groenkunsmis.co.za",
   },
   {
     title: "Operations",
     icon: Truck,
-    href: "https://logistics.allsize.co.za",
+    href: "https://ops.groenkunsmis.co.za",
   },
 ];
 
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      {/* <Header /> */}
 
       <main className="relative flex-1 flex flex-col items-center justify-center px-6 py-16">
         <VideoBackground />
@@ -58,13 +63,11 @@ const Index = () => {
           </motion.div>
 
           {/* Portal Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
             {portals.map((portal, index) => (
-              <PortalCard
-                key={portal.title}
-                {...portal}
-                delay={0.5 + index * 0.15}
-              />
+              <div key={portal.title} className="min-w-0">
+                <PortalCard {...portal} delay={0.5 + index * 0.15} />
+              </div>
             ))}
           </div>
 
