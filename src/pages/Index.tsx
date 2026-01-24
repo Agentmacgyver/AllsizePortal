@@ -26,19 +26,19 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      
+
       <main className="relative flex-1 flex flex-col items-center justify-center px-6 py-16">
         <VideoBackground />
-        
+
         <div className="relative z-10 max-w-6xl mx-auto w-full">
           {/* Hero Text */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <motion.h1 
+            <motion.h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -47,13 +47,13 @@ const Index = () => {
               <span className="text-foreground">Welcome to </span>
               <span className="text-gradient">Groen Kunsmis</span>
             </motion.h1>
-            <motion.p 
+            <motion.p
               className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Select a system below to access our integrated business platforms
+              Select a system below
             </motion.p>
           </motion.div>
 
@@ -69,7 +69,7 @@ const Index = () => {
           </div>
 
           {/* Footer */}
-          <motion.footer 
+          <motion.footer
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.2 }}
