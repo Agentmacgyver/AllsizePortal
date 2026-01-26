@@ -58,7 +58,7 @@ const Index = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Select a system below
+              Select a platform below
             </motion.p>
           </motion.div>
 
