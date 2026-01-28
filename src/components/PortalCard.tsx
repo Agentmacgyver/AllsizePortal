@@ -25,19 +25,19 @@ const PortalCard = forwardRef<HTMLAnchorElement, PortalCardProps>(
         className="group block glass-card rounded-2xl p-8 border border-border/50 transition-all duration-500 hover:border-primary/50"
       >
         <div className="flex flex-col items-center text-center space-y-5">
-          <motion.div 
+          <motion.div
             className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center group-hover:glow-primary transition-all duration-500"
             whileHover={{ rotate: 5 }}
           >
             <Icon className="w-10 h-10 text-primary transition-transform duration-300 group-hover:scale-110" />
           </motion.div>
-          
+
           <h3 className="text-2xl font-semibold text-foreground group-hover:text-gradient transition-all duration-300">
             {title}
           </h3>
 
           <div className="flex items-center gap-2 text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <span>Access System</span>
+            <span>Access Platform</span>
             <motion.span
               animate={{ x: [0, 4, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
